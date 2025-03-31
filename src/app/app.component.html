@@ -1,1 +1,40 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav-content>
+        <div class="nav-bar-container">
+            <div class="content">
+                <h1 class="title">ALEX</h1>
+                <div class="buttons">
+                    <a class="button left"> ABOUT ME</a>
+                    <a class="button left"> SERVICES</a>
+                    <a class="button left"> EXPERIENCES</a>
+                    <a class="action-button"> LETS TALK!</a>
+
+                    <mat-icon class="menu-button" aria-hidden="false" aria-label="Example home icon" fontIcon="menu"
+                        (click)="sideNav.toggle()" [class.open]="isOpen">
+                    </mat-icon>
+
+                </div>
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+        
+    </mat-sidenav-content>
+
+    <mat-sidenav class="side-nav" #sideNav mode="over" position="end">
+        <div class="sidenav-container">
+
+            <mat-icon class="menu-button" aria-hidden="false" aria-label="Example home icon" fontIcon="close"
+                (click)="sideNav.toggle()" [class.open]="isOpen">
+            </mat-icon>
+            
+            <ul>
+                @for (item of menuItems; track item; let i = $index; ) {
+                <li class="menu-item" [style.--index]="i"><a>{{item}}</a></li>
+                <hr>
+                }
+            </ul>
+        </div>
+    </mat-sidenav>
+
+</mat-sidenav-container>

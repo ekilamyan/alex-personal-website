@@ -1,18 +1,16 @@
-<div class="hover-container">
-    <div class="hidden-element">This is a hidden element</div>
-    Hover over me!
-</div>
-
 <section>
-    <h1 class="service-category">WHAT CAN I OFFER?</h1>
+    <div class="heading">
+        <h1>WHAT CAN I OFFER?</h1>
+        <h2>No project is ever too big</h2>
+    </div>>
     <div class="services-container">
         @for (service of services1; track service) {
         <div class="service" [style.background-image]="'url(' + service.imageUrl + ')'">
             <h2 class="title">{{ service.title }}</h2>
-            <p>{{ service.description }}</p>
-            <div class="hidden-text">
-                {{ service.hiddenText }}
-                <a href="#" class="learn-more-btn">Learn More</a>
+            <div class="hidden-element">
+                <!-- {{ service.hiddenText }} -->
+                <p>{{ service.description }}</p>
+                <a class="action-button"> LETS TALK!</a>
             </div>
         </div>
         }
@@ -22,83 +20,12 @@
         @for (service of services2; track service) {
         <div class="service" [style.background-image]="'url(' + service.imageUrl + ')'">
             <h2 class="title">{{ service.title }}</h2>
-            <p>{{ service.description }}</p>
-            <div class="hidden-text">
-                {{ service.hiddenText }}
-                <a href="#" class="learn-more-btn">Learn More</a>
+            <div class="hidden-element">
+                <!-- {{ service.hiddenText }} -->
+                <p>{{ service.description }}</p>
+                <a class="action-button"> LETS TALK!</a>
             </div>
         </div>
         }
     </div>
 </section>
-
-
-
-
-
-
-<!-- <div class="service">
-            <img src="https://cdn.thewirecutter.com/wp-content/media/2024/07/outdoorsecuritycameras-2048px-3518.jpg?auto=webp&quality=75&crop=1.91:1&width=1200" alt="">
-            <h2 class="title">Security</h2>
-        </div> -->
-
-
-<!-- <section>
-    <h1 class="service-category"> WHAT CAN I OFFER?</h1>
-    <div class="services-container">
-        <div class="service">
-            <div class="image-container">
-                <img src="https://confiolabs.com/wp-content/uploads/2024/02/1_eumNIzPYyE8X7On5iM02Hw.jpg" alt="">
-            </div>
-            <h2 class="title">TECHNOLOGY &amp; IT CONSULTING</h2>
-            <p>Networks, infrastructure, security, cloud</p>
-        </div>
-
-        <div class="service">
-            <div class="image-container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbDnGenvrEBHvu5E9MUY2MD-sbswkGcJQbIg&s"
-                    alt="">
-            </div>
-            <h2 class="title">HOME &amp; BUSINESS AUTOMATION</h2>
-            <p>Smart homes, security, AV solutions</p>
-        </div>
-
-        <div class="service">
-            <div class="image-container">
-                <img src="https://live-noco.com/wp-content/uploads/2020/11/Home-Tech-6.jpg" alt="">
-            </div>
-            <h2 class="title">AUDIO/VIDEO &amp; CUSTOM INSTALLATIONS</h2>
-            <p>Studios, home theaters, conference rooms</p>
-        </div>
-
-    </div>
-
-    <div class="services-container">
-        <div class="service">
-            <div class="image-container">
-                <img src="https://confiolabs.com/wp-content/uploads/2024/02/1_eumNIzPYyE8X7On5iM02Hw.jpg" alt="">
-            </div>
-            <h2 class="title">AUTOMOTIVE &amp; CUSTOM BUILDS</h2>
-            <p>Car restoration, modifications</p>
-        </div>
-
-        <div class="service">
-            <div class="image-container">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbDnGenvrEBHvu5E9MUY2MD-sbswkGcJQbIg&s"
-                    alt="">
-            </div>
-            <h2 class="title">ADVISORY &amp; CONSULTIING SERVICES</h2>
-            <p>Helping you make informed decisions</p>
-        </div>
-
-        <div class="service">
-            <div class="image-container">
-                <img src="https://live-noco.com/wp-content/uploads/2020/11/Home-Tech-6.jpg" alt="">
-            </div>
-            <h2 class="title">Much, Much More...</h2>
-            <p>Can't find what youre looking for, Contact me and we'll see what we can do</p>
-        </div>
-
-    </div>
-
-</section> -->

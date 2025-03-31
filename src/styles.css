@@ -13,7 +13,7 @@ h1, h2, h3 {
   padding: 0;
   box-sizing: border-box;
   font-family: 'D-DIN', sans-serif;
-  color: white;
+  /* color: white; */
 }
 
 /* Body styles */

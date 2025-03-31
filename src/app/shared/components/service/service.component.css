@@ -1,54 +1,25 @@
-/* section {
-    display: flex;
-    flex-direction: column;
+/* heading */
+.heading {
+    flex: column;
     align-items: center;
+    text-align: center;
+    width: 100%;
+
+    margin: 40px 0px 40px 0px;
+    padding: 30px;
+
+    color: white;
 }
 
-.service-category {
+.heading h1 {
     font-family: 'D-DIN Bold';
     font-size: 50px;
-    margin: 50px;
 }
 
-.services-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: 100%;
-    max-height: 500px;
+.heading h2 {
+    font-family: 'D-DIN';
+    margin: 10px;
 }
-
-
-.service {
-    display: flex;
-    flex-direction: column;
-    width: 33.3%;
-}
-
-.title {
-    font-family: 'D-DIN Bold';
-    margin: 10px 0px 10px 0px;
-}
-
-.image-container {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-.image-container img:hover {
-    opacity: 1;
-    transition: 0.9s;
-} */
 
 
 .service-category {
@@ -80,16 +51,13 @@
 }
 
 .service h2 {
+    width: 60%;
     font-family: 'D-DIN Bold';
     font-weight: bold;
     font-size: 40px;
-    margin-bottom: 20px;
-    z-index: 1;
-    transition: transform 0.3s ease;
-}
-
-.service p {
-    z-index: 1;
+    /* z-index: 1; */
+    transition: transform 0.6s ease;
+    transform: translateY(40px);
 }
 
 .service::before {
@@ -102,57 +70,63 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.hidden-text {
+.service:hover h2 {
+    transform: translateY(-20px);
+}
+
+
+/* hidden element */
+.hidden-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    font-size: 24px;
+
     opacity: 0;
-    /* Start hidden */
-    margin-top: 20px;
+    visibility: hidden;
     transition: opacity 0.5s ease;
-    /* Smooth fade-in effect */
-    z-index: 1;
-    display: none;
     text-align: center;
 }
 
-.learn-more-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background-color: #fff;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
+.hidden-element p {
+    font-family: 'D-DIN Bold';
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.learn-more-btn:hover {
-    background-color: #444;
-    color: #fff;
+.service h2, .service .hidden-element {
+    position: relative;
+    z-index: 1;
+}
+
+.service:hover .hidden-element {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.action-button {
+    /* remove default button styling */
+    margin: 10px 0px 10px 0px;
+    width: 30%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+
+    font-family: 'D-DIN Bold';
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid white;
     transition: 0.3s;
 }
 
-.service:hover h2 {
-    transition: 0.5s;
-    transform: translateY(-20px);
-    /* Title moves up */
-}
-
-.service:hover .hidden-text {
-    opacity: 1;
-    /* Make the text visible on hover */
-    display: block;
-    /* Ensure it's displayed */
-    transition: opacity 0.5s ease;
-    /* Smooth fade-in effect */
-}
-
-
-
-.hidden-element {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.hover-container:hover .hidden-element {
-    opacity: 1;
+.action-button:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { MaterialImportsModule } from '../../../../material-imports.module';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
